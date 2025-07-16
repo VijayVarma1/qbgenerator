@@ -2,6 +2,8 @@
   "name": "qbgenerator",
   "version": "1.0.0",
   "main": "electron.js",
+  "description": "Question Bank Generator with Electron and React",
+  "author": "Your Name",
   "scripts": {
     "react-start": "cd app && npm start",
     "react-build": "cd app && npm run build",
@@ -18,14 +20,12 @@
     "files": [
       "electron.js",
       "preload.js",
-      "app/build/**/*"
-    ],
-    "extraResources": [
       {
         "from": "app/build",
         "to": "app/build"
       }
     ],
+    "extraResources": [],
     "win": {
       "target": "nsis"
     }
@@ -38,5 +38,6 @@
     "mammoth": "^1.5.1",
     "pdf-parse": "^1.1.1",
     "wait-on": "^7.0.1"
-  }
+  },
+  "devDependencies": {}
 }
