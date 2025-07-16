@@ -1,0 +1,42 @@
+{
+  "name": "qbgenerator",
+  "version": "1.0.0",
+  "main": "electron.js",
+  "scripts": {
+    "react-start": "cd app && npm start",
+    "react-build": "cd app && npm run build",
+    "start": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dist": "npm run react-build && electron-builder"
+  },
+  "build": {
+    "appId": "com.qbgenerator.app",
+    "productName": "QB Generator",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "electron.js",
+      "preload.js",
+      "app/build/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "app/build",
+        "to": "app/build"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "cosmiconfig": "^9.0.0",
+    "electron": "^28.1.3",
+    "electron-builder": "^24.9.1",
+    "mammoth": "^1.5.1",
+    "pdf-parse": "^1.1.1",
+    "wait-on": "^7.0.1"
+  }
+}

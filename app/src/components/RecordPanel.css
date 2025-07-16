@@ -1,0 +1,30 @@
+.record-panel {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 75vh;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.record-card {
+    background: white;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.question-item {
+    margin-bottom: 10px;
+}
+
+.question-item ul {
+    padding-left: 20px;
+    margin: 5px 0;
+}
